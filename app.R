@@ -1,5 +1,4 @@
-library(shiny)
-library(datasets)
+source('dependencies.R')
 
 # Define the User Interface (ui) as content embedded in "template.html"
 ui <- htmlTemplate("template.html", content = fluidPage(
