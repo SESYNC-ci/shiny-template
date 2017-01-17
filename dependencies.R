@@ -1,5 +1,4 @@
-requirements <- c('shiny',
-                  'datasets')
+requirements <- c('datasets')
 
 missing <- setdiff(requirements, rownames(installed.packages()))
 if (length(missing) != 0) {
