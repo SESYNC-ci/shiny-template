@@ -98,6 +98,10 @@ html, body{
     min-height: 100%;
     background: #2A2E31;
 }
+body {
+    display: flex;
+    flex-direction: column;
+}
 .page-header {
     margin: 0px;
     border-bottom: none;
@@ -116,10 +120,14 @@ html, body{
     background: #FFF;
     padding-left: 10px;
     padding-right: 10px;
+/*    overflow-y: scroll; */
+/*    -webkit-overflow-scrolling: touch; */
+    flex: auto;
 }
 #header {
     width: 100%;
     background: #000;
+    flex: none;
 }
 #footer {
     min-height: 125px;
@@ -128,6 +136,7 @@ html, body{
     font-size: 0.85em;
     color: #ccc;
     font-family: "proxima_nova_ltsemibold";
+    flex: none;
 }
 .footer-logo img {
     padding-top: 10px;
@@ -160,6 +169,13 @@ h5, h6 {
     font-size: 1em
 }
 
+/* Small Devices */
+@media only screen and (max-width : 768px) {
+    #footer {
+	    display: none;
+    }
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
     .contentpage {
@@ -185,15 +201,10 @@ h5, h6 {
     	overflow: hidden;
     }    
     .main-content {
-    	height: calc(100vh - 125px - 75px);
     	overflow-y: hidden;
     }
     .main-content:hover {
     	overflow-y: auto;
-    }
-    #footer {
-	    position: absolute;
-	    bottom:0;
     }
 }
 
